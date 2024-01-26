@@ -8,6 +8,8 @@ new 명령어를 통해 인스턴스를 생성 시 호출한 개수만큼 인스
 <출력 결과>
 start
 Created Singleton
+Get Instance
+Get Instance
 instance1과 instance2 동일성 비교 : true
 end
  */
@@ -17,8 +19,8 @@ public class Main {
         System.out.println("start");
 
         //Created Singleton
-        Singleton instance1 = Singleton.getInstance();
-        Singleton instance2 = Singleton.getInstance();
+        Singleton instance1 = Singleton.getInstance(); //Get Instance
+        Singleton instance2 = Singleton.getInstance(); //Get Instance
 
         System.out.println("instance1과 instance2 동일성 비교 : " + (instance1 == instance2)); //true
         System.out.println("end");

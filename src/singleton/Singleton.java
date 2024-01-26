@@ -8,6 +8,7 @@ public class Singleton {
     }
 
     public static Singleton getInstance() {
+        System.out.println("Get Instance");
         return singleton;
     }
 }
