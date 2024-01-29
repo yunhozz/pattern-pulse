@@ -22,11 +22,9 @@ public abstract class Page {
     }
 
     public void output() {
-        try {
-            String filename = title + ".html";
-            Writer writer = new FileWriter(filename);
-            writer.write(this.makeHTML());
-            writer.close();
+        String filename = title + ".html";
+        try(Writer writer = new FileWriter(filename)) {
+            writer.write(makeHTML());
             System.out.println(filename + " 을 작성했습니다.");
 
         } catch(IOException e){
